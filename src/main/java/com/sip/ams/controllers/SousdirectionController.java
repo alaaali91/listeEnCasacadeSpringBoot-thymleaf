@@ -36,11 +36,24 @@ public class SousdirectionController {
         this.sousdirectionRepository = sousdirectionRepository;
         this.directionRepository = directionRepository ;
         this.directiongRepository = directiongRepository;
+    	System.out.println("init : controllor SousdirectionController");
     }
+    
+    
+    
+    
+    public void init() {
+    	
+    
+    	
+    }
+    
+    
 
     @GetMapping("list")
     //@ResponseBody
     public String listSousdirections(Model model) {
+    	System.out.println("init : controllor SousdirectionController"+sousdirectionRepository.findSousDirectionByEtatAndCode(0,10).size());
 
         List<Sousdirection> lp = (List<Sousdirection>)sousdirectionRepository.findAll();
 
