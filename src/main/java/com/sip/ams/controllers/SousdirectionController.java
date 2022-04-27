@@ -53,8 +53,11 @@ public class SousdirectionController {
     @GetMapping("list")
     //@ResponseBody
     public String listSousdirections(Model model) {
-    	System.out.println("init : controllor SousdirectionController"+sousdirectionRepository.findSousDirectionByEtatAndCode(0,10).size());
-
+    //	System.out.println("init : controllor SousdirectionController"+sousdirectionRepository.findSousDirectionByEtatAndCode(0,10).size());
+  // System.out.println("init : controllor SousdirectionController"+sousdirectionRepository.findSousDirectionByEtatAndCode(0,10).size());
+    	
+    	
+    	System.out.println("init : controllor SousdirectionController"+sousdirectionRepository.countByLibeleDirection("direction1"));
         List<Sousdirection> lp = (List<Sousdirection>)sousdirectionRepository.findAll();
 
         if(lp.size()==0)
